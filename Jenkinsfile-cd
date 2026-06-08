@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('Docker Deploy') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                        sh 'docker run -d --name ekart -p 8070:8070 YOUR_DOCKERHUB_USERNAME/ekart:latest'
+                    }
+                }
+            }
+        }
+    }
+}
