@@ -13,21 +13,19 @@ End-to-End CI/CD Pipeline using Jenkins, SonarQube, Docker and AWS EC2
 ## Pipeline Flow
 Git Checkout → Compile → Test → SonarQube Analysis → OWASP Scan → Build → Docker Build and Push → Deploy
 
-## CI Pipeline Stages
-| Stage | Description |
-|-------|-------------|
-| Git Checkout | Pull code from GitHub |
-| Compile | Maven compile |
-| Test | Maven test |
-| SonarQube Analysis | Code quality check |
-| OWASP Scan | Security vulnerability scan |
-| Build | Maven clean install |
-| Docker Build and Push | Build image and push to DockerHub |
+## Screenshots
 
-## CD Pipeline Stages
-| Stage | Description |
-|-------|-------------|
-| Docker Deploy | Pull image and run container |
+### Jenkins Dashboard
+![Jenkins Dashboard](screenshots/Screenshot 2026-06-07 at 12.56.38 AM.png)
+
+### Pipeline Stages
+![Pipeline Stages](screenshots/Screenshot 2026-06-07 at 12.56.49 AM.png)
+
+### SonarQube Analysis
+![SonarQube](screenshots/Screenshot 2026-06-07 at 1.00.57 AM.png)
+
+### App Running
+![App](screenshots/Screenshot 2026-06-07 at 1.01.48 AM.png)
 
 ## Access
 - Jenkins: http://ec2-ip:8080
